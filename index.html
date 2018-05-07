@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC>
+
+<html>
+  <head>
+  	<link rel="stylesheet" href="style.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<script src="jquery.js"></script>
+    <script src="jquery.flip.min.js"></script>
+    <script src="aframe.js"></script>
+    <title>Album VR - Teste</title>
+  </head>
+  <body>
+  	<div class="left"><</div>
+  	<div class="right">></div>
+
+	
+
+    <a-scene id="pagina1">
+      <a-plane src="landscape.mp4" id="one" position="0 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_02.jpg" id="two" position="11 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_03.jpg" id="tree" position="24 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_04.jpg" id="four" position="35 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_05.jpg" id="tree" position="24 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_06.jpg" id="four" position="35 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_07.jpg" id="tree" position="47 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_08.jpg" id="four" position="58 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_09.jpg" id="tree" position="70 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_10.jpg" id="four" position="81 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_11.jpg" id="tree" position="93 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_12.jpg" id="four" position="104 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+        
+      <a-plane src="albumteste_13.jpg" id="tree" position="116 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_01.jpg" id="four" position="127 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-plane src="albumteste_01.jpg" id="tree" position="139 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+      <a-plane src="albumteste_01.jpg" id="four" position="150 0 -6" rotation="0 0 0" width="11" height="6" color="#fff"></a-plane>
+
+      <a-light type="ambient" color="white"></a-light>
+      <a-entity position="0">
+  <a-camera></a-camera>
+</a-entity>
+
+    </a-scene>
+
+
+    <script>
+    	$('document').ready(function(){
+    		var NextSpread = 7;
+        $('.right').click(function(){
+          NextSpread += 7;
+          $('a-entity').attr('position', NextSpread);
+        });
+        $('.left').click(function(){
+          NextSpread -= 7;
+          $('a-entity').attr('position', NextSpread);
+        });
+    	});
+    </script>
+  </body>
+</html>

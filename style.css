@@ -1,0 +1,30 @@
+.right{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  right: 0;
+  background-color: lightblue;
+  z-index: 9;
+    color: white;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+  line-height: 1
+}
+
+.left{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  left: 0;
+  background-color: lightgreen;
+  z-index: 9;
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+  line-height: 1
+}
+.left, .right{
+  cursor: pointer;
+}
